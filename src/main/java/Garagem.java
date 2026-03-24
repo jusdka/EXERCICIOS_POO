@@ -4,13 +4,15 @@ public class Garagem {
         carro1.marca = "BYD";
         carro1.modelo = "Dolphin";
         carro1.ano = 2024;
-        System.out.println("Marca: " + carro1.marca + ", Modelo: " + carro1.modelo + ", Ano: " + carro1.ano);
+        carro1.exibir();
+        carro1.idadeDoCarro();
 
         Carro carro2 = new Carro();
         carro2.marca = "VolksWagen";
         carro2.modelo = "Voyage";
         carro2.ano = 2011;
-        System.out.println("Marca: " + carro2.marca + ", Modelo: " + carro2.modelo + ", Ano: " + carro2.ano);
+        carro2.exibir();
+
     }
 
 }
