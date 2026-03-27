@@ -8,6 +8,12 @@ public class Carro {
         this.modelo = modelo;
         this.ano = ano;
     }
+
+    public Carro(){
+        this.marca = "Desconhecido";
+        this.modelo = "Desconhecido";
+        this.ano = 0;
+    }
     public String getMarca(){
         return this.marca;
     }
