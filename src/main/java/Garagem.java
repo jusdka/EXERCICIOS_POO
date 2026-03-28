@@ -9,15 +9,15 @@ public class Garagem {
         System.out.println("--------------------------------------------");
         Carro.imprimirTotal();
 
+        //Carro.ANO_PRIMEIRO_CARRO = 1900;
+        System.out.println("Ano primeiro carro: " + Carro.ANO_PRIMEIRO_CARRO);
+
 
     }
 
 }
 
-// não tem como acessar modelo pelo imprimirTotal(), pois ele não é estático, desse modo, não tem como referencia-lo.
+// se tentar alterar o valor para 1900 ele não vai deixar pois é uma variável final.
 
-//por que um método static não consegue acessar um atributo de
-//instância?
-//Porque um método static pertence à classe, não a uma instância específica.
-//Já um atributo de instância só existe quando um objeto é criado. Como o método static não tem referência a nenhum objeto
-// (this), ele não sabe qual instância deveria acessar — por isso não pode usar atributos de instância diretamente.
+//FINAL: adicionar final em uma variável faz ela virar uma constante de leitura única, ou seja, seu valor não pode ser
+// alterado.
