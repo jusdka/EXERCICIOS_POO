@@ -3,16 +3,20 @@ public class Carro {
     private String modelo;
     private int ano;
 
+    public static int totalCarros = 0; //atributo estático
+
     public Carro(String marca, String modelo, int ano){
         this.marca = marca;
         this.modelo = modelo;
         this.ano = ano;
+        totalCarros++;
     }
 
     public Carro(){
         this.marca = "Desconhecido";
         this.modelo = "Desconhecido";
         this.ano = 0;
+        totalCarros++;
     }
     public String getMarca(){
         return this.marca;
