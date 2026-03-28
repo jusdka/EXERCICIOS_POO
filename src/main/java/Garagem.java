@@ -7,15 +7,17 @@ public class Garagem {
         Carro carro4 = new Carro();
         Carro carro5 = new Carro("Fiat", "Mobi", 2021);
         System.out.println("--------------------------------------------");
-        System.out.println("Total de carros criados: " + Carro.totalCarros);
+        Carro.imprimirTotal();
 
 
     }
 
 }
 
-// usamos Carro.totalCarros - usamos o nome da classe porque como é um atributo estático, isso indica que ele pertence a classe,
-// e não a um objeto em si.
+// não tem como acessar modelo pelo imprimirTotal(), pois ele não é estático, desse modo, não tem como referencia-lo.
 
-//atributo static - pertence a classe, existe um única cópia na memória para todos.
-//atributo de instância - pertence ao objeto criado, cada objeto tem sua própria cópia na memória.
+//por que um método static não consegue acessar um atributo de
+//instância?
+//Porque um método static pertence à classe, não a uma instância específica.
+//Já um atributo de instância só existe quando um objeto é criado. Como o método static não tem referência a nenhum objeto
+// (this), ele não sabe qual instância deveria acessar — por isso não pode usar atributos de instância diretamente.

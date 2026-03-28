@@ -2,7 +2,6 @@ public class Carro {
     private String marca;
     private String modelo;
     private int ano;
-
     public static int totalCarros = 0; //atributo estático
 
     public Carro(String marca, String modelo, int ano){
@@ -18,6 +17,12 @@ public class Carro {
         this.ano = 0;
         totalCarros++;
     }
+
+    public static void imprimirTotal(){
+        System.out.println("Imprimir total de carros: " + totalCarros);
+        //System.out.println(this.modelo);
+    }
+
     public String getMarca(){
         return this.marca;
     }
