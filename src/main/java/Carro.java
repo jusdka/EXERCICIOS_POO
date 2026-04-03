@@ -12,18 +12,6 @@ public class Carro {
         totalCarros++;
     }
 
-    public Carro(){
-        this.marca = "Desconhecido";
-        this.modelo = "Desconhecido";
-        this.ano = 0;
-        totalCarros++;
-    }
-
-    public static void imprimirTotal(){
-        System.out.println("Imprimir total de carros: " + totalCarros);
-        //System.out.println(this.modelo);
-    }
-
     public String getMarca(){
         return this.marca;
     }
@@ -50,10 +38,12 @@ public class Carro {
         }
     }
 
-    public void exibir(){
-        System.out.println("Marca: " + this.getMarca());
-        System.out.println("Modelo: " + this.getModelo());
-        System.out.println("Ano: " + (this.getAno() == 0 ? "Não informado" : this.getAno()));
+    public static int getTotalCarros() {
+        return totalCarros;
+    }
+    @Override
+    public String toString() {
+        return String.format("Marca: %-10s | Modelo: %-10s | Ano: %d", marca, modelo, ano);
     }
 
 }
